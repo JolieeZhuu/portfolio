@@ -21,14 +21,14 @@ export default function Home() {
                     repeat={Infinity}
                 />
             </div>
-            <div className="flex flex-col items-center justify-center">
+            {/* <div className="flex flex-col items-center justify-center">
                 <h1>Quick Links</h1>
                 <div className="flex flex-row items-center justify-center gap-4">
                     <Link href="/about-me">About Me</Link>
                     <Link href="/projects">Projects</Link>
                     <Link href="/skills">Skills</Link>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
