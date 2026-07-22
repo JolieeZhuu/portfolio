@@ -1,4 +1,4 @@
-import RecentsCarousel from "../components/recents"
+import RecentsCarousel from "../components/recents-carousel"
 
 export default function AboutMe() {
     return (
