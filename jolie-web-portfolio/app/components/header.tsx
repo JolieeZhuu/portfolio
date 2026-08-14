@@ -1,28 +1,29 @@
 "use client"
 
 import { TypeAnimation } from "react-type-animation";
+import TypeIt from "typeit-react";
 import { Button } from "@/components/ui/button";
 import { ArrowUpIcon } from "lucide-react"
 
 export default function Header() {
     return (
         <div className="flex flex-row justify-between max-width border-b p-3">
-            <div>
-                {/* Put in my name */}
-                <TypeAnimation
-                    sequence={[
-                        // Same substring at the start will only be typed out once, initially
-                        'Jolie Zhu',
-                        1000, // wait 1s before replacing "Mice" with "Hamsters"
-                        '',
-                        1000,
-                    ]}
-                    wrapper="span"
-                    speed={50}
-                    style={{ fontSize: '2em', display: 'inline-block' }}
-                    repeat={Infinity}
-                />
-            </div>
+            <a href="/">
+                <div style={{
+                        fontSize: '1.5em'
+                    }}>
+                    <TypeIt
+                        options={{ loop: true }}
+                        getBeforeInit={(instance) => {
+                            instance
+                            .type("Jolie <span style='color: #C10B0B;'>Zhu</span>")
+                            .pause(3000) // Wait for 3 seconds (3000 milliseconds)
+                            .delete(3)
+                            return instance;
+                        }}
+                    />
+                </div>
+            </a>
             <div className="flex flex-row gap-4">
                 {/* Put in the buttons */}
                 <Button variant="outline" size="icon" aria-label="Email">

@@ -13,13 +13,13 @@ import {
 
 export default function NavBar() {
     return (
-        <div>
+        <div className="">
             <NavigationMenu>
                 <NavigationMenuList>
                     <NavigationMenuItem>
                         <NavigationMenuLink
                             render={<Link href="/about-me" />}
-                            className={""}
+                            className={"text-base border px-5"}
                         >
                             About Me
                         </NavigationMenuLink>
@@ -27,7 +27,7 @@ export default function NavBar() {
                     <NavigationMenuItem>
                         <NavigationMenuLink
                             render={<Link href="/projects" />}
-                            className={""}
+                            className={"text-base border px-5"}
                         >
                             Projects
                         </NavigationMenuLink>
@@ -35,7 +35,7 @@ export default function NavBar() {
                     <NavigationMenuItem>
                         <NavigationMenuLink
                             render={<Link href="/skills" />}
-                            className={""}
+                            className={"text-base border px-5"}
                         >
                             Skills
                         </NavigationMenuLink>
