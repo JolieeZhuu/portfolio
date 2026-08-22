@@ -53,7 +53,7 @@ export default function Home() {
                         options={{ loop: true }}
                         getBeforeInit={(instance) => {
                             instance
-                            .type("Jolie <span style='color: #C10B0B;'>Zhu</span>")
+                            .type("Jolie <span style='color: #AD4F4E;'>Zhu</span>")
                             .pause(3000) // Wait for 3 seconds (3000 milliseconds)
                             .delete(3)
                             return instance;
