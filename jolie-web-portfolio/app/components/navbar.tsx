@@ -23,7 +23,7 @@ export default function NavBar() {
     ];
 
     return (
-        <div className="border shadow-md rounded-md">
+        <div className="shadow-md rounded-md border overflow-hidden">
             <NavigationMenu>
                 <NavigationMenuList>
                     {
@@ -39,8 +39,8 @@ export default function NavBar() {
                                             "text-base px-8 transition-colors duration-200 text-[var(--accent)] bg-[var(--background)] hover:text-black",
                                             
                                             isActive 
-                                                ? "focus:bg-[var(--background)] hover:bg-[var(--background)]" 
-                                                : "text-muted-foreground hover:text-foreground text-[#CCCCCC]"
+                                                ? "focus:bg-[var(--primary)] hover:bg-[var(--primary)]" 
+                                                : "text-muted-foreground hover:text-foreground text-[var(--primary)]"
                                         )}
                                     >
                                         {item.name}

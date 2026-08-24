@@ -10,14 +10,18 @@ export default function Skills() {
     const colourT = ['bg-[#6E5494]', 'bg-[#1D63ED]', 'bg-[#009CDE]', 'bg-[#21759B] text-[#FFFFFF]', 'bg-[#f24e1e]', 'bg-[#4DABCF]', 'bg-[#150458] text-[#FFFFFF]', 'bg-[#FF6C37]']
     const frameworks = ['React', 'Spring Boot', 'Flask', 'Node.js', 'NextJS', 'PyTorch', 'Android']
     const colourF = ['bg-[#61DBFB]', 'bg-[#6DB33F]', 'bg-[#80C0C0]', 'bg-[#6CC24A]', 'bg-[#000000] text-[#FFFFFF]', 'bg-[#EE4C2C]', 'bg-[#4FAF53]']
+    const hoverDescsL = ['Experience in OOP and related frameworks from Art Log and Jeometry Dash']
+    const hoverDescsT = ['aaaa']
+    const hoverDescsF = ['aaaa']
     return (
         <div className="mx-40">
-            <div className="grid grid-cols-3">
+            <div className="grid grid-cols-3 gap-20">
                 {/* Languages */}
                 <SkillColumn
                     skillTitle="Languages"
                     skillSet={languages}
                     colours={colourL}
+                    hoverDescs={hoverDescsL}
                 />
 
                 {/* Tools */}
@@ -25,6 +29,7 @@ export default function Skills() {
                     skillTitle="Tools"
                     skillSet={tools}
                     colours={colourT}
+                    hoverDescs={hoverDescsT}
                 />
 
                 {/* Frameworks */}
@@ -32,6 +37,7 @@ export default function Skills() {
                     skillTitle="Frameworks"
                     skillSet={frameworks}
                     colours={colourF}
+                    hoverDescs={hoverDescsF}
                 />
             </div>
         </div>

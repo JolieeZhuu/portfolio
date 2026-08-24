@@ -3,18 +3,23 @@
 import { Button } from "@/components/ui/button"
 import { ArrowUpIcon } from "lucide-react"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
+import React from "react"
 
 interface ProjectCardProps {
     projectTitle: string,
-    image: string[]
-    projectDescription: string
+    image: string[],
+    projectDescription: string,
+    onShowMore: () => void
 }
 
-export default function ProjectCard({ projectTitle, image, projectDescription } : ProjectCardProps) {
+export default function ProjectCard({ projectTitle, image, projectDescription, onShowMore } : ProjectCardProps) {
+    const router = useRouter();
+    
     return (
-        <div className="flex flex-row justify-between">
-            <div className="flex flex-col">
-                <h1>{projectTitle}</h1>
+        <div className="flex flex-row justify-between border p-5 rounded-md shadow-lg">
+            <div className="flex flex-col gap-3">
+                <h1 className="text-xl font-medium">{projectTitle}</h1>
                 <div className="flex flex-row gap-10">
                     <div className="relative w-50 h-50 overflow-hidden flex-shrink-0">
                         <Image
@@ -24,7 +29,14 @@ export default function ProjectCard({ projectTitle, image, projectDescription } 
                             sizes="200px"
                         />
                     </div>
-                    <p>{projectDescription}</p>
+                    <div className="flex flex-col justify-between">
+                        <p>{projectDescription}</p>
+                        <div className="justify-items-end">
+                            <Button className="rounded-md" variant="outline" aria-label={`More info on ${projectTitle}`} onClick={() => onShowMore()}>
+                                Show More
+                            </Button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

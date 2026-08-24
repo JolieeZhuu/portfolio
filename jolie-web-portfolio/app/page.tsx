@@ -41,7 +41,7 @@ export default function Home() {
                     style={{ fontSize: '7em' }}
                 >Jolie Zhu|</span>
 
-                <span className="absolute top-0 left-0 text-gray-200 select-none" style={{ fontSize: '7em' }}>
+                <span className="absolute top-0 left-0 text-[var(--primary)] select-none" style={{ fontSize: '7em' }}>
                     Jolie
                 </span>
 

@@ -17,7 +17,7 @@ export default function RootLayout({
         <div className="flex items-center justify-center mt-4 mb-4">
             <NavBar/>
         </div>
-        <div className="m-4 ml-90 mr-90"> 
+        <div className="m-4 mx-[20%]"> 
             {/* fix the spacing because currently it is fixed */}
             {children}
         </div>
