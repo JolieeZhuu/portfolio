@@ -17,7 +17,7 @@ export default function ProjectCard({ projectTitle, image, projectDescription, o
     const router = useRouter();
     
     return (
-        <div className="flex flex-row justify-between border p-5 rounded-md shadow-lg">
+        <div className="flex flex-row justify-between border p-8 rounded-md shadow-lg">
             <div className="flex flex-col gap-3">
                 <h1 className="text-xl font-medium">{projectTitle}</h1>
                 <div className="flex flex-row gap-10">
@@ -27,12 +27,13 @@ export default function ProjectCard({ projectTitle, image, projectDescription, o
                             alt={image[1]}
                             fill
                             sizes="200px"
+                            className="object-cover"
                         />
                     </div>
                     <div className="flex flex-col justify-between">
                         <p>{projectDescription}</p>
                         <div className="justify-items-end">
-                            <Button className="rounded-md" variant="outline" aria-label={`More info on ${projectTitle}`} onClick={() => onShowMore()}>
+                            <Button className="rounded-md bg-[var(--tertiary-accent)] hover:bg-[var(--secondary-accent)]" variant="outline" aria-label={`More info on ${projectTitle}`} onClick={() => onShowMore()}>
                                 Show More
                             </Button>
                         </div>

@@ -23,14 +23,15 @@ export default function SkillColumn({ skillTitle, skillSet, colours, hoverDescs 
                     {
                         skillSet.map((skill, index) => (
                             <div key={index}>
-                                <HoverCard>
+                                <Badge variant="outline" className={"text-base p-4 rounded-lg border shadow-md font-normal " + colours[index]}>{skill}</Badge>
+                                {/* <HoverCard>
                                     <HoverCardTrigger delay={100} closeDelay={200}>
                                         <Badge variant="outline" className={"text-base p-4 rounded-lg border shadow-md font-normal " + colours[index]}>{skill}</Badge>
                                     </HoverCardTrigger>
                                     <HoverCardContent>
                                         {hoverDescs[index]}
                                     </HoverCardContent>
-                                </HoverCard>
+                                </HoverCard> */}
                             </div>
                             // will change the design for this later
                         ))

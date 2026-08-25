@@ -13,7 +13,9 @@ export default function RootLayout({
 }>) {
   return (
     <>
-        <Header/>
+        <div className="sticky top-0 z-50">
+            <Header/>
+        </div>
         <div className="flex items-center justify-center mt-4 mb-4">
             <NavBar/>
         </div>

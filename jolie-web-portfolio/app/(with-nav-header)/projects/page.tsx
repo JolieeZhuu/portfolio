@@ -157,7 +157,7 @@ export default function Projects() {
                             <Dialog open={isOpen} onOpenChange={setIsOpen}>
                                 <DialogContent className="xl:max-w-xl !max-w-fit text-base p-10">
                                     <DialogHeader>
-                                        <DialogTitle className="text-base">{selectedProject.title}</DialogTitle>
+                                        <DialogTitle className="text-lg">{selectedProject.title}</DialogTitle>
                                     </DialogHeader>
                                     <div className="leading-normal max-h-[50vh] overflow-y-auto">
                                         <ProjectSidePage project={selectedProject}/>

@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function Header() {
     return (
-        <div className="flex flex-row justify-between max-width border-b p-3 px-10">
+        <div className="flex flex-row justify-between max-width border-b p-3 px-10 bg-[var(--background)]">
             <a href="/">
                 <span className="absolute p-3 px-10 top-0 left-0 text-[var(--primary)] select-none" style={{ fontSize: '1.5em' }}>
                     Jolie
@@ -31,12 +31,12 @@ export default function Header() {
             <div className="flex flex-row gap-4">
                 {/* Put in the buttons */}
                 <Link href="mailto:joliezhu34@gmail.com" target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" size="icon" aria-label="Email">
+                    <Button variant="outline" size="icon" aria-label="Email" className="hover:bg-[var(--secondary-accent)]">
                         <Mail/>
                     </Button>
                 </Link>
                 <Link href="https://www.linkedin.com/in/jolie-z/" target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" size="icon" aria-label="LinkedIn">
+                    <Button variant="outline" size="icon" aria-label="LinkedIn" className="hover:bg-[var(--secondary-accent)]">
                         <img
                             src="/images/linkedin.png"
                             alt="LinkedIn"
@@ -45,7 +45,7 @@ export default function Header() {
                     </Button>
                 </Link>
                 <Link href="https://github.com/JolieeZhuu" target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" size="icon" aria-label="GitHub">
+                    <Button variant="outline" size="icon" aria-label="GitHub" className="hover:bg-[var(--secondary-accent)]">
                         <img
                             src="/images/github.png"
                             alt="GitHub"

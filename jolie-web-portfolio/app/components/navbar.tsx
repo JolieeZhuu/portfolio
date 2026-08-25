@@ -17,9 +17,9 @@ import { cn } from "@/lib/utils"
 export default function NavBar() {
     const pathname = usePathname();
     const navItems = [
-        { name: "About Me", href: "/about-me" },
-        { name: "Projects", href: "/projects" },
-        { name: "Skills", href: "/skills" },
+        { name: "about me", href: "/about-me" },
+        { name: "projects", href: "/projects" },
+        { name: "skills", href: "/skills" },
     ];
 
     return (

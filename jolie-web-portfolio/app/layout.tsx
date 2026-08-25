@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
+import localFont from 'next/font/local';
 import "@/app/globals.css"
 import { cn } from "@/lib/utils";
 
@@ -13,6 +14,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const atkinsonMono = localFont({
+    src: '../public/fonts/AtkinsonHyperlegibleMono-VariableFont_wght.ttf',
+    display: 'swap',
+    fallback: ['monospace']
 });
 
 export const metadata: Metadata = {
@@ -29,7 +36,7 @@ export default function RootLayout({
     <>
         <html
         lang="en"
-        className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-mono", jetbrainsMono.variable)}
+        className={cn("h-full", "antialiased", atkinsonMono.className, geistSans.variable, geistMono.variable, "font-mono", jetbrainsMono.variable)}
         >
         <body className="min-h-full flex flex-col pb-10">
             <div className="flex flex-col">
