@@ -2,43 +2,46 @@
 
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { ArrowUpIcon } from "lucide-react"
+import { GlassesIcon, BookCopyIcon, SparklesIcon } from "lucide-react"
 import Image from "next/image"
 
 export default function ArtLog() {
     return (
-        <div>
+        <div className="text-[var(--foreground)]">
             {/* <h1>Art Log (July 2024 - Current)</h1> */}
             <div className="flex flex-col gap-10">
-                <div className="flex flex-row gap-10">
-                    <div className="relative w-50 h-50 overflow-hidden flex-shrink-0">
-                        <Image
-                            src="/images/artlog.png"
-                            alt="image of Art Log logo"
-                            fill
-                            sizes="200px"
-                            className="object-cover"
-                        />
+                <div>
+                    <h1 className="text-lg font-medium pb-3 text-[var(--secondary)] flex flex-row gap-2"><GlassesIcon/>project overview</h1>
+                    <div className="flex flex-row gap-10">
+                        <div className="relative w-50 h-50 overflow-hidden flex-shrink-0">
+                            <Image
+                                src="/images/artlog.png"
+                                alt="image of Art Log logo"
+                                fill
+                                sizes="200px"
+                                className="object-cover"
+                            />
+                        </div>
+                        <p>Art Log is a web application I am currently building for the admins 
+                            at my local art studio. It is intended to automate tasks for the front-desk workers, 
+                            such managing student attendances and payment processes. It features a RBAC system, 
+                            automatic announcement calls, search tables on students and classes, and studio-related 
+                            statistics.</p>
                     </div>
-                    <p>Art Log is a web application I am currently building for the admins 
-                        at my local art studio. It is intended to automate tasks for the front-desk workers, 
-                        such managing student attendances and payment processes. It features a RBAC system, 
-                        automatic announcement calls, search tables on students and classes, and studio-related 
-                        statistics.</p>
                 </div>
                 <div>
-                    <h1 className="text-lg font-medium">Tech Stack</h1>
+                    <h1 className="text-lg font-medium text-[var(--secondary)] pb-3 flex flex-row gap-2"><BookCopyIcon/>tech stack</h1>
                     <div className="flex flex-row gap-3">
-                        <Badge variant="outline" className="text-sm font-normal">Spring Boot</Badge>
-                        <Badge variant="outline" className="text-sm font-normal">React</Badge>
-                        <Badge variant="outline" className="text-sm font-normal">Vite</Badge>
-                        <Badge variant="outline" className="text-sm font-normal">gTTs4j (TTS API)</Badge>
-                        <Badge variant="outline" className="text-sm font-normal">Supabase</Badge>
-                        <Badge variant="outline" className="text-sm font-normal">Flyway</Badge>
+                        <Badge className="text-sm font-normal p-3 rounded-md bg-[var(--primary)] text-[var(--foreground)] hover:bg-[var(--secondary-accent)] hover:text-[var(--primary)] hover:font-medium">spring boot</Badge>
+                        <Badge className="text-sm font-normal p-3 rounded-md bg-[var(--primary)] text-[var(--foreground)] hover:bg-[var(--secondary-accent)] hover:text-[var(--primary)] hover:font-medium">react</Badge>
+                        <Badge className="text-sm font-normal p-3 rounded-md bg-[var(--primary)] text-[var(--foreground)] hover:bg-[var(--secondary-accent)] hover:text-[var(--primary)] hover:font-medium">vite</Badge>
+                        <Badge className="text-sm font-normal p-3 rounded-md bg-[var(--primary)] text-[var(--foreground)] hover:bg-[var(--secondary-accent)] hover:text-[var(--primary)] hover:font-medium">gtts4j (tts api)</Badge>
+                        <Badge className="text-sm font-normal p-3 rounded-md bg-[var(--primary)] text-[var(--foreground)] hover:bg-[var(--secondary-accent)] hover:text-[var(--primary)] hover:font-medium">supabase</Badge>
+                        <Badge className="text-sm font-normal p-3 rounded-md bg-[var(--primary)] text-[var(--foreground)] hover:bg-[var(--secondary-accent)] hover:text-[var(--primary)] hover:font-medium">flyway</Badge>
                     </div>
                 </div>
                 <div>
-                    <h1 className="text-lg font-medium">Features</h1>
+                    <h1 className="text-lg font-medium text-[var(--secondary)] pb-3 flex flex-row gap-2"><SparklesIcon/>features</h1>
                     <ul>
                         <li>&bull; Login and signup (email verification and OTP) with secure authenticated routes.</li>
                         <li>&bull; Automated attendance tracking for students (i.e. absent, makeup, attended).</li>

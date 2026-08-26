@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { InfoIcon, SpotlightIcon, CogIcon } from "lucide-react"
 
 import {
   NavigationMenu,
@@ -17,13 +18,13 @@ import { cn } from "@/lib/utils"
 export default function NavBar() {
     const pathname = usePathname();
     const navItems = [
-        { name: "about me", href: "/about-me" },
-        { name: "projects", href: "/projects" },
-        { name: "skills", href: "/skills" },
+        { name: "about me", href: "/about-me", icon: <InfoIcon/> },
+        { name: "projects", href: "/projects", icon: <SpotlightIcon/> },
+        { name: "skills", href: "/skills", icon: <CogIcon/> },
     ];
 
     return (
-        <div className="shadow-md rounded-md border overflow-hidden">
+        <div className="shadow-md rounded-md border border-[var(--primary)] overflow-hidden">
             <NavigationMenu>
                 <NavigationMenuList>
                     {
@@ -36,13 +37,14 @@ export default function NavBar() {
                                         active={isActive}
                                         className={cn(
                                             navigationMenuTriggerStyle(),
-                                            "text-base px-8 transition-colors duration-200 text-[var(--accent)] bg-[var(--background)] hover:text-black",
+                                            "text-base px-8 transition-colors duration-200 text-[var(--secondary-accent)] bg-[var(--background)] hover:text-black",
                                             
                                             isActive 
                                                 ? "focus:bg-[var(--primary)] hover:bg-[var(--primary)]" 
-                                                : "text-muted-foreground hover:text-foreground text-[var(--primary)]"
+                                                : "hover:text-foreground text-[var(--primary)]"
                                         )}
                                     >
+                                        {item.icon}
                                         {item.name}
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>

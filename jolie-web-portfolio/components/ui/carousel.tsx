@@ -182,10 +182,9 @@ function CarouselPrevious({
   return (
     <Button
       data-slot="carousel-previous"
-      variant={variant}
       size={size}
       className={cn(
-        "absolute touch-manipulation",
+        "absolute touch-manipulation rounded-md text-[var(--foreground)] bg-[var(--primary)] hover:bg-[var(--secondary-accent)] hover:text-[var(--primary)] active:bg-[var(--foreground)] active:text-[var(--primary)]",
         orientation === "horizontal"
           ? "inset-y-0 -left-12 my-auto"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -212,10 +211,9 @@ function CarouselNext({
   return (
     <Button
       data-slot="carousel-next"
-      variant={variant}
       size={size}
       className={cn(
-        "absolute touch-manipulation",
+        "absolute touch-manipulation rounded-md text-[var(--foreground)] bg-[var(--primary)] hover:bg-[var(--secondary-accent)] hover:text-[var(--primary)] active:bg-[var(--foreground)] active:text-[var(--primary)]",
         orientation === "horizontal"
           ? "inset-y-0 -right-12 my-auto"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",

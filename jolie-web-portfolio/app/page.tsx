@@ -32,8 +32,12 @@ export default function Home() {
 
     return (
         <div className="flex flex-col items-center justify-center h-screen pb-20">
-            <div>
-                <Badge>tab</Badge>/<Badge>enter</Badge>/<Badge>tap</Badge> to continue
+            <div className="text-[var(--foreground)]">
+                <Badge className="text-[var(--foreground)] text-base font-normal">tab</Badge>
+                /
+                <Badge className="text-[var(--foreground)] text-base font-normal">enter</Badge>
+                /
+                <Badge className="text-[var(--foreground)] text-base font-normal">tap</Badge> to continue
             </div>
             <div className="relative text-left flex">
                 <span 
@@ -55,12 +59,24 @@ export default function Home() {
                             instance
                             .type("Jolie <span style='color: #AD4F4E;'>Zhu</span>")
                             .pause(3000) // Wait for 3 seconds (3000 milliseconds)
-                            .delete(3)
+                            .delete(4)
                             return instance;
                         }}
                     />
                 </div>
             </div>
+            {/* <div className="">
+                <TypeIt
+                    options={{ speed: 20 }}
+                    getBeforeInit={(instance) => {
+                        instance
+                        .pause(1000)
+                        .type("169 wpm, 97% accuracy ;)")
+                        .pause(2000) // Wait for 3 seconds (3000 milliseconds)
+                        return instance;
+                    }}
+                />
+            </div> */}
         </div>
     )
 }

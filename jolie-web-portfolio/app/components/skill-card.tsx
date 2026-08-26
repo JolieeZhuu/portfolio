@@ -6,24 +6,27 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card"
+import { LucideIcon, LucideProps } from "lucide-react"
 
 interface SkillColumnProps {
     skillTitle: string,
     skillSet: string[],
-    colours: string[],
-    hoverDescs: string[]
+    hoverDescs: string[],
+    icon: LucideIcon
 }
 
-export default function SkillColumn({ skillTitle, skillSet, colours, hoverDescs } : SkillColumnProps) {
+export default function SkillCard({ skillTitle, skillSet, hoverDescs, icon: Icon } : SkillColumnProps) {
     return (
         <div>
-            <div className="items-center justify-center text-center text-xl font-medium">
-                <h1>{skillTitle}</h1>
-                <div className="flex flex-col gap-3 pt-5 items-center">
+            <div className="">
+                <h1 className="text-2xl font-medium text-[var(--secondary)] flex flex-row gap-2"><Icon className="size-7"/>{skillTitle}</h1>
+                <div className="flex flex-row gap-3 flex-wrap pt-3">
                     {
                         skillSet.map((skill, index) => (
                             <div key={index}>
-                                <Badge variant="outline" className={"text-base p-4 rounded-lg border shadow-md font-normal " + colours[index]}>{skill}</Badge>
+                                <Badge className={"text-base p-4 rounded-lg font-normal bg-[var(--primary)] text-[var(--foreground)] hover:bg-[var(--secondary-accent)] hover:text-[var(--primary)] hover:font-medium"}>
+                                    {skill}
+                                </Badge>
                                 {/* <HoverCard>
                                     <HoverCardTrigger delay={100} closeDelay={200}>
                                         <Badge variant="outline" className={"text-base p-4 rounded-lg border shadow-md font-normal " + colours[index]}>{skill}</Badge>

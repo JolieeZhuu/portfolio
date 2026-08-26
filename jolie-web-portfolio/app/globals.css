@@ -54,14 +54,14 @@ body {
 
 :root {
   --background: oklch(0.9617 0.0198 77.32);
-  --foreground: oklch(0.145 0 0);
+  --foreground: oklch(0.366 0.01 139.44);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(0.9617 0.0198 77.32);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.8899 0.0236 77.32);
+  --primary: oklch(0.8987 0.0258 78.91);
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
+  --secondary: oklch(0.787 0.0225 76.49);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);

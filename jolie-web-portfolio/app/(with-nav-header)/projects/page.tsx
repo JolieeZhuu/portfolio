@@ -35,8 +35,8 @@ export default function Projects() {
     
     return (
         <div>
-            <div className="flex flex-row gap-10 w-full">
-                <div className="flex flex-col gap-10 transition-all duration-300">
+            <div className="flex flex-row gap-10 w-full pt-5">
+                <div className="flex flex-col gap-20 transition-all duration-300">
                     {projects.map((project) => (
                         <div key={project.id}>
                             <ProjectCard
@@ -149,7 +149,7 @@ export default function Projects() {
 
                 {
                     selectedProject && (
-                        <div className="w-[50vw] border-l pl-10 bg-[var(--primary)]">
+                        <div>
                             {/* <Button variant="outline" size="icon" onClick={() => setSelectedProject(null)}>
                                 <ArrowRightIcon/>
                             </Button> */}
@@ -157,7 +157,7 @@ export default function Projects() {
                             <Dialog open={isOpen} onOpenChange={setIsOpen}>
                                 <DialogContent className="xl:max-w-xl !max-w-fit text-base p-10">
                                     <DialogHeader>
-                                        <DialogTitle className="text-lg">{selectedProject.title}</DialogTitle>
+                                        <DialogTitle className="text-xl text-[var(--secondary)] font-medium">{selectedProject.title}</DialogTitle>
                                     </DialogHeader>
                                     <div className="leading-normal max-h-[50vh] overflow-y-auto">
                                         <ProjectSidePage project={selectedProject}/>
@@ -170,7 +170,7 @@ export default function Projects() {
                                     </DialogDescription>
                                     </DialogHeader> */}
                                 <DialogFooter>
-                                    <DialogClose render={<Button variant="outline">Close</Button>} />
+                                    <DialogClose render={<Button className="p-4 rounded-md text-base text-[var(--foreground)] hover:bg-[var(--secondary-accent)] hover:text-[var(--primary)] hover:font-medium">close</Button>} />
                                 </DialogFooter>
                                 </DialogContent>
                             </Dialog>

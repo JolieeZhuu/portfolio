@@ -36,7 +36,7 @@ export default function RootLayout({
     <>
         <html
         lang="en"
-        className={cn("h-full", "antialiased", atkinsonMono.className, geistSans.variable, geistMono.variable, "font-mono", jetbrainsMono.variable)}
+        className={cn("h-full h-screen overflow-y-auto scrollbar-thin scrollbar-thumb-[var(--secondary)]", "antialiased", atkinsonMono.className, geistSans.variable, geistMono.variable, "font-mono", jetbrainsMono.variable)}
         >
         <body className="min-h-full flex flex-col pb-10">
             <div className="flex flex-col">

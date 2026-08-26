@@ -1,44 +1,49 @@
 "use client"
 
 import { Badge } from "@/components/ui/badge"
-import SkillColumn from "@/app/components/skill-column"
+import SkillCard from "@/app/components/skill-card"
+import { CodeXmlIcon, ToolboxIcon, ScanBoxIcon, ShieldCheckIcon } from "lucide-react"
 
 export default function Skills() {
-    const languages = ['Java', 'Python', 'Typescript', 'Javascript', 'C', 'C++', 'SQL', 'HTML/CSS', 'TailwindCSS']
-    const colourL = ['bg-[#ED8B00]', 'bg-[#4584B6]', 'bg-[#3178C6]', 'bg-[#F0DB4F]', 'bg-[#BBBBBB]', 'bg-[#00599C] text-[#FFFFFF]', 'bg-[#336791] text-[#FFFFFF]', 'bg-[#F06529]', 'bg-[#38BDF8]']
-    const tools = ['Git', 'Docker', 'Drupal', 'WordPress', 'Figma', 'NumPy', 'Pandas', 'Postman']
-    const colourT = ['bg-[#6E5494]', 'bg-[#1D63ED]', 'bg-[#009CDE]', 'bg-[#21759B] text-[#FFFFFF]', 'bg-[#f24e1e]', 'bg-[#4DABCF]', 'bg-[#150458] text-[#FFFFFF]', 'bg-[#FF6C37]']
-    const frameworks = ['React', 'Spring Boot', 'Flask', 'Node.js', 'NextJS', 'PyTorch', 'Android']
-    const colourF = ['bg-[#61DBFB]', 'bg-[#6DB33F]', 'bg-[#80C0C0]', 'bg-[#6CC24A]', 'bg-[#000000] text-[#FFFFFF]', 'bg-[#EE4C2C]', 'bg-[#4FAF53]']
+    const languages = ['java', 'python', 'typescript', 'javascript', 'c', 'c++', 'sql', 'html/css', 'tailwind']
+    const tools = ['git', 'docker', 'drupal', 'wordpress', 'figma', 'numpy', 'pandas', 'postman']
+    const frameworks = ['react', 'spring boot', 'flask', 'node.js', 'nextjs', 'pytorch', 'android']
     const hoverDescsL = ['Experience in OOP and related frameworks from Art Log and Jeometry Dash']
     const hoverDescsT = ['aaaa']
     const hoverDescsF = ['aaaa']
     return (
-        <div className="mx-40">
-            <div className="grid grid-cols-3 gap-20">
+        <div className="pt-5">
+            <div className="flex flex-col gap-10">
                 {/* Languages */}
-                <SkillColumn
-                    skillTitle="Languages"
+                <SkillCard
+                    skillTitle="languages"
                     skillSet={languages}
-                    colours={colourL}
                     hoverDescs={hoverDescsL}
+                    icon={CodeXmlIcon}
                 />
 
                 {/* Tools */}
-                <SkillColumn
-                    skillTitle="Tools"
+                <SkillCard
+                    skillTitle="tools"
                     skillSet={tools}
-                    colours={colourT}
                     hoverDescs={hoverDescsT}
+                    icon={ToolboxIcon}
                 />
 
                 {/* Frameworks */}
-                <SkillColumn
-                    skillTitle="Frameworks"
+                <SkillCard
+                    skillTitle="frameworks"
                     skillSet={frameworks}
-                    colours={colourF}
                     hoverDescs={hoverDescsF}
+                    icon={ScanBoxIcon}
                 />
+
+                {/* Certifications */}
+                <div className="pt-10 space-y-1 text-base">
+                    <h1 className="text-2xl font-medium text-[var(--secondary)] flex flex-row gap-2"><ShieldCheckIcon className="size-7"/>certifications</h1>
+                    {/* <p>ISC2 CC (Certified in Cybersecurity)</p> */}
+                    <p>DELF B2</p>
+                </div>
             </div>
         </div>
     )
