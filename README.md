@@ -1,5 +1,5 @@
 # Web Portfolio
 My portfolio heh :3
 
-## Author
+## 👩‍💻 Author
 Jolie Zhu
