@@ -2,8 +2,9 @@
 
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { GlassesIcon, BookCopyIcon, SparklesIcon } from "lucide-react"
+import { GlassesIcon, BookCopyIcon, SparklesIcon, Circle } from "lucide-react"
 import Image from "next/image"
+import { Card, CardContent, CardHeader } from "@/components/ui/card"
 
 export default function PathoQuery() {
     return (
@@ -12,14 +13,19 @@ export default function PathoQuery() {
                 <div>
                     <h1 className="text-lg font-medium pb-3 text-[var(--secondary)] flex flex-row gap-2"><GlassesIcon/>project overview</h1>
                     <div className="flex flex-row gap-10">
-                        <div className="relative w-50 h-50 overflow-hidden flex-shrink-0">
-                            <Image
-                                src="/images/PathoQuery.png"
-                                alt="image of PathoQuery logo"
-                                fill
-                                sizes="200px"
-                                className="object-cover"
-                            />
+                        <div className="relative w-60 overflow-hidden flex-shrink-0">
+                            <Card className="bg-[var(--primary)] rounded-md max-w-md">
+                                <CardHeader className="flex flex-row gap-2 text-[var(--secondary-accent)]">
+                                    <Circle className="size-3"/><Circle className="size-3"/><Circle className="size-3"/>
+                                </CardHeader>
+                                <CardContent>
+                                    <img
+                                        src="/images/PathoQuery.png"
+                                        alt="image of PathoQuery logo"
+                                        className="object-cover"
+                                    />
+                                </CardContent>
+                            </Card>
                         </div>
                         <p>PathoQuery is an AI-powered platform designed to help to general public 
                             visualize the spread of viral diseases and learn about viral behaviour, 

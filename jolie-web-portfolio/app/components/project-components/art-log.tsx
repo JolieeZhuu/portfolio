@@ -2,8 +2,9 @@
 
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { GlassesIcon, BookCopyIcon, SparklesIcon } from "lucide-react"
+import { GlassesIcon, BookCopyIcon, SparklesIcon, Circle } from "lucide-react"
 import Image from "next/image"
+import { Card, CardHeader, CardContent } from "@/components/ui/card"
 
 export default function ArtLog() {
     return (
@@ -13,20 +14,24 @@ export default function ArtLog() {
                 <div>
                     <h1 className="text-lg font-medium pb-3 text-[var(--secondary)] flex flex-row gap-2"><GlassesIcon/>project overview</h1>
                     <div className="flex flex-row gap-10">
-                        <div className="relative w-50 h-50 overflow-hidden flex-shrink-0">
-                            <Image
-                                src="/images/artlog.png"
+                        <div className="relative w-60 overflow-hidden flex-shrink-0">
+                            <Card className="bg-[var(--primary)] rounded-md max-w-md">
+                                <CardHeader className="flex flex-row gap-2 text-[var(--secondary-accent)]">
+                                    <Circle className="size-3"/><Circle className="size-3"/><Circle className="size-3"/>
+                                </CardHeader>
+                                <CardContent>
+                                    <img
+                                        src="/images/artlog.png"
                                 alt="image of Art Log logo"
-                                fill
-                                sizes="200px"
-                                className="object-cover"
-                            />
+                                        className="object-cover"
+                                    />
+                                </CardContent>
+                            </Card>
                         </div>
-                        <p>Art Log is a web application I am currently building for the admins 
+                        <p>Art Log is a web application I am currently building for the front-desk workers 
                             at my local art studio. It is intended to automate tasks for the front-desk workers, 
                             such managing student attendances and payment processes. It features a RBAC system, 
-                            automatic announcement calls, search tables on students and classes, and studio-related 
-                            statistics.</p>
+                            automatic announcement calls, search tables, and studio statistics and summaries.</p>
                     </div>
                 </div>
                 <div>

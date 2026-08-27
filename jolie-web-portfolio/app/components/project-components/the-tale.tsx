@@ -2,8 +2,9 @@
 
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { GlassesIcon, BookCopyIcon, SparklesIcon } from "lucide-react"
+import { GlassesIcon, BookCopyIcon, SparklesIcon, Circle } from "lucide-react"
 import Image from "next/image"
+import { Card, CardContent, CardHeader } from "@/components/ui/card"
 
 export default function TheTale() {
     return (
@@ -12,21 +13,24 @@ export default function TheTale() {
                 <div>
                     <h1 className="text-lg font-medium pb-3 text-[var(--secondary)] flex flex-row gap-2"><GlassesIcon/>project overview</h1>
                     <div className="flex flex-row gap-10">
-                        <div className="relative w-50 h-50 overflow-hidden flex-shrink-0">
-                            <Image
-                                src="/images/TheTale.png"
-                                alt="image of TheTale logo"
-                                fill
-                                sizes="200px"
-                                className="object-cover"
-                            />
+                        <div className="relative w-60 overflow-hidden flex-shrink-0">
+                            <Card className="bg-[var(--primary)] rounded-md max-w-md">
+                                <CardHeader className="flex flex-row gap-2 text-[var(--secondary-accent)]">
+                                    <Circle className="size-3"/><Circle className="size-3"/><Circle className="size-3"/>
+                                </CardHeader>
+                                <CardContent>
+                                    <img
+                                        src="/images/TheTale.png"
+                                        alt="image of TheTale logo"
+                                        className="object-cover"
+                                    />
+                                </CardContent>
+                            </Card>
                         </div>
-                        <p>The Tale (for short) is a forensics support system for BacsaHacks 
-                            that takes in information about the crime and potential suspects 
-                            of a particular crime scene (notably fingerprints and DNA samples), 
-                            and ranks the most likely suspect. It offers streamlined UI experience, 
-                            an automatically generated case report, and additional analysis tools 
-                            and information extracted from the primary sources.</p>
+                        <p>The Tale is a forensics support system for BacsaHacks that takes in information about 
+                            the crime and potential suspects of a particular crime scene, and ranks the most 
+                            likely suspect. It offers streamlined UI experience, an automatically generated case 
+                            report, and additional analysis tools and extrapolated information.</p>
                     </div>
                 </div>
                 <div>
@@ -43,8 +47,8 @@ export default function TheTale() {
                     <ul>
                         <li>&bull; OpenCV ORB for feature-matching fingerprints; works with extreme edge cases too.</li>
                         <li>&bull; Needleman-Wunsch dynamic programming algorithm for DNA sequence alignment.</li>
-                        <li>&bull; Input handling for users to provide images</li>
-                        <li>&bull; Dashboard that displays statistics on suspect ranking and analytical evidence</li>
+                        <li>&bull; Input handling for users to provide images.</li>
+                        <li>&bull; Dashboard that displays statistics on suspect ranking and analytical evidence.</li>
                         <li>&bull; Integrated Gemini API to auto-generate a well-formatted case report.</li>
                         <li>&bull; Clean and intuitive UI/UX design.</li>
                     </ul>

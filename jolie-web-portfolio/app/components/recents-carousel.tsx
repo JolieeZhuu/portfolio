@@ -8,7 +8,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
 import Image from "next/image"
+import { useRef } from "react"
 
 interface RecentsCarouselProps {
     images: string[][],
@@ -16,12 +18,15 @@ interface RecentsCarouselProps {
 }
 
 export default function RecentsCarousel({ images, descriptions } : RecentsCarouselProps) {
+    const autoplayPlugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: false }))
     return(
         <div>
             <Carousel
                 opts={{
                     align: "start",
+                    loop: true
                 }}
+                plugins={[autoplayPlugin.current]}
                 className="w-full"
             >
             <CarouselContent>
@@ -29,18 +34,10 @@ export default function RecentsCarousel({ images, descriptions } : RecentsCarous
                 <CarouselItem key={index} className="basis-1/2 lg:basis-1/4">
                     <div className="p-1">
                     <Card className="text-sm text-[var(--foreground)] bg-[var(--primary)] rounded-md hover:bg-[var(--secondary-accent)] hover:text-[var(--primary)] hover:font-medium">
-                        <CardContent className="flex aspect-square items-center justify-center">
-                            <Image 
-                                src={images[index][0]}
-                                alt={images[index][1]}
-                                width={2000}
-                                height={2000}
-                            />
-                        {/* <span className="text-3xl font-semibold">{index + 1}</span> */}
-                        </CardContent>
-                        <CardFooter>
+                        <CardContent>
                             {descriptions[index]}
-                        </CardFooter>
+
+                        </CardContent>
                     </Card>
                     </div>
                 </CarouselItem>

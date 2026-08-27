@@ -17,7 +17,7 @@ export const projects = [
     {
         id: 8,
         title: "art log (july 2024 - present)",
-        desc: "Art Log is a web application I am currently building for the front-desk workers at my local art studio. It is intended to automate tasks for the front-desk workers, such managing student attendances and payment processes. It features a RBAC system (admin, IT, general user), automatic announcement calls, search tables on students and classes, and studio-related statistics and summaries.",
+        desc: "Art Log is a web application I am currently building for the front-desk workers at my local art studio. It is intended to automate tasks for the front-desk workers, such managing student attendances and payment processes. It features a RBAC system, automatic announcement calls, search tables, and studio statistics and summaries.",
         image: ["/images/artlog.png", "cat image"],
         component: ArtLog
     },
@@ -31,14 +31,14 @@ export const projects = [
     {
         id: 6,
         title: "web portfolio (august 2026)",
-        desc: "Well...you're looking at it right now :). Welcome to my web portfolio! I wanted to make something recognizable, and since I do like minimalistic aesthetics and grind MonkeyType, I took some inspiration from MonkeyType's UI and colour schemes. In just about a week, I was able to draft a Figma design of my web portfolio and develop and deploy it with NextJS and Vercel.",
+        desc: "Well...you're looking at it right now :). Since I like minimalist aesthetics and grind MonkeyType, I took some inspiration from MonkeyType's UI. In just about a week, I drafted a Figma design and developed and deployed it with NextJS and Vercel.",
         image: ["/images/webportfolio.png", "image of TAAM logo"],
         component: WebPortfolio
     },
     {
         id: 5,
         title: "taam inventory management system (july 2026 - august 2026)",
-        desc: "The TAAM Inventory Management System is a project for course CSCB07, where our team created an Android application that allows both admins and users to view artifacts from the museum digitally. It offers several user interactions (i.e. likes, comments, save-to-collection). This application relies on clean architecture, software design principles, robust testing, and clean UI/UX, allowing for ease of extendibility and reusability.",
+        desc: "The TAAM Inventory Management System is a project for course CSCB07, where our team created an Android application that allows both admins and users to view artifacts from the museum digitally. It offers several user interactions (i.e. likes, comments, save-to-collection). This application relies on clean architecture, software design principles, robust testing, and clean UI/UX.",
         image: ["/images/TAAM.png", "image of TAAM logo"],
         component: TAAM
     },
@@ -52,7 +52,7 @@ export const projects = [
     {
         id: 3,
         title: "the tale of two sequences and fingerprints (march 2026)",
-        desc: "The Tale (for short) is a forensics support system for BacsaHacks that takes in information about the crime and potential suspects of a particular crime scene (notably fingerprints and DNA samples), and ranks the most likely suspect. It offers streamlined UI experience, an automatically generated case report, and additional analysis tools and information extracted from the primary sources.",
+        desc: "The Tale is a forensics support system for BacsaHacks that takes in information about the crime and potential suspects of a particular crime scene, and ranks the most likely suspect. It offers streamlined UI experience, an automatically generated case report, and additional analysis tools and extrapolated information.",
         image: ["/images/TheTale.png", "image of TheTale dashboard"],
         component: TheTale
     },

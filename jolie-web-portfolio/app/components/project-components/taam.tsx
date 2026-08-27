@@ -2,8 +2,9 @@
 
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { GlassesIcon, BookCopyIcon, SparklesIcon } from "lucide-react"
+import { GlassesIcon, BookCopyIcon, SparklesIcon, Circle } from "lucide-react"
 import Image from "next/image"
+import { Card, CardHeader, CardContent } from "@/components/ui/card"
 
 export default function TAAM() {
     return (
@@ -12,21 +13,26 @@ export default function TAAM() {
                 <div>
                     <h1 className="text-lg font-medium pb-3 text-[var(--secondary)] flex flex-row gap-2"><GlassesIcon/>project overview</h1>
                     <div className="flex flex-row gap-10">
-                        <div className="relative w-50 h-50 overflow-hidden flex-shrink-0">
-                            <Image
-                                src="/images/TAAM.png"
-                                alt="image of TAAM logo"
-                                fill
-                                sizes="200px"
-                                className="object-cover"
-                            />
+                        <div className="relative w-60 overflow-hidden flex-shrink-0">
+                            <Card className="bg-[var(--primary)] rounded-md max-w-md">
+                                <CardHeader className="flex flex-row gap-2 text-[var(--secondary-accent)]">
+                                    <Circle className="size-3"/><Circle className="size-3"/><Circle className="size-3"/>
+                                </CardHeader>
+                                <CardContent>
+                                    <img
+                                        src="/images/TAAM.png"
+                                        alt="image of TAAM logo"
+                                        className="object-cover"
+                                    />
+                                </CardContent>
+                            </Card>
                         </div>
                         <p>The TAAM Inventory Management System is a project for course CSCB07, 
                             where our team created an Android application that allows both admins 
                             and users to view artifacts from the museum digitally. It offers several 
                             user interactions (i.e. likes, comments, save-to-collection). This application 
                             relies on clean architecture, software design principles, robust testing, 
-                            and clean UI/UX, allowing for ease of extendibility and reusability.</p>
+                            and clean UI/UX.</p>
                     </div>
                 </div>
                 <div>
@@ -46,8 +52,8 @@ export default function TAAM() {
                         <li>&bull; Admin and general user roles, with separate permissions.</li>
                         <li>&bull; Artifact gallery view, choice of pagination, and choice of filters.</li>
                         <li>&bull; Personal artifact collections that users can save.</li>
-                        <li>&bull; Expanded artifact view, where users can interact (i.e. like, save, comment)</li>
-                        <li>&bull; Standardized UI and colour scheme, with intuitive UX</li>
+                        <li>&bull; Expanded artifact view, where users can interact (i.e. like, save, comment).</li>
+                        <li>&bull; Standardized UI and colour scheme, with intuitive UX.</li>
                     </ul>
                 </div>
                 {/* <div>
