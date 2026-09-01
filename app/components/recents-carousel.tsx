@@ -33,12 +33,12 @@ export default function RecentsCarousel({ images, descriptions } : RecentsCarous
                 {Array.from({ length: descriptions.length }).map((_, index) => (
                 <CarouselItem key={index} className="basis-1/2 lg:basis-1/4">
                     <div className="p-1">
-                    <Card className="text-sm text-[var(--foreground)] bg-[var(--primary)] rounded-md hover:bg-[var(--secondary-accent)] hover:text-[var(--primary)] hover:font-medium">
-                        <CardContent>
-                            {descriptions[index]}
+                        <Card className="text-sm text-[var(--foreground)] bg-[var(--primary)] rounded-md hover:bg-[var(--secondary-accent)] hover:text-[var(--primary)] hover:font-medium">
+                            <CardContent>
+                                {descriptions[index]}
 
-                        </CardContent>
-                    </Card>
+                            </CardContent>
+                        </Card>
                     </div>
                 </CarouselItem>
                 ))}

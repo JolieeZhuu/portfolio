@@ -34,11 +34,12 @@ export default function AboutMe() {
         ],
     ]
     const descriptions = [
-        // 'ISC2-CC certificate',
+        'ISC2 CC certificate',
+        'MPAC Continuing Academic Excellence Award',
         'Website portfolio',
         'UofT web assistant @ UTC',
         'TAAM inventory Android app',
-        '169 wpm, 97% accuracy :)',
+        '169 wpm, 97% accuracy',
         '$10K UofT scholarship',
     ]
     return (

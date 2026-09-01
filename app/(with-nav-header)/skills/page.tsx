@@ -41,7 +41,7 @@ export default function Skills() {
                 {/* Certifications */}
                 <div className="pt-10 space-y-1 text-base">
                     <h1 className="text-2xl font-medium text-[var(--secondary)] flex flex-row gap-2"><ShieldCheckIcon className="size-7"/>certifications</h1>
-                    {/* <p>ISC2 CC (Certified in Cybersecurity)</p> */}
+                    <p>ISC2 CC (Certified in Cybersecurity)</p>
                     <p>DELF B2</p>
                 </div>
             </div>
