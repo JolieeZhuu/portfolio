@@ -34,7 +34,7 @@ export default function AboutMe() {
         ],
     ]
     const descriptions = [
-        'ISC2 CC certificate',
+        'Passed ISC2 CC exam',
         'MPAC Continuing Academic Excellence Award',
         'Website portfolio',
         'UofT web assistant @ UTC',
